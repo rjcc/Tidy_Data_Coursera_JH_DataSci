@@ -8,8 +8,9 @@ Information about the R scripts used for the data cleaning project. The project 
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-** This repo is for the "Get and Clean Data" Coursera by John Hopkins on Data Scie, the week-4 assignment...
-** Modified from https://github.com/arundeep78
+
+This repo is for the "Get and Clean Data" Coursera by John Hopkins on Data Scie, the week-4 assignment...
+Modified from https://github.com/arundeep78
 
 # Run_analysis.R
 
