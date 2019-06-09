@@ -1,4 +1,4 @@
-The Codebook describes the variables and relevant transformations for the data cleaning project.
+The Codebook describes the variables, functions, and relevant transformations for the data cleaning project.
 
 # run_analysis.R
 
