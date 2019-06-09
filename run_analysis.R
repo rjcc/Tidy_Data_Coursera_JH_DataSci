@@ -35,7 +35,7 @@ join_data = function(folder_path, file1, file2){
 }
 
 get_feature_cols_means_std = function(folder_path,features_file){
-    # This function get the column numbers for al features that has "mean" and "std" values
+    # This function get the column numbers for all features that has "mean" and "std" values
     
     if(!file.exists(folder_path)){ return("folder path is invalid")}
     
