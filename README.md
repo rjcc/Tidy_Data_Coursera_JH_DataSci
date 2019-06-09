@@ -35,10 +35,8 @@ The functions to read data from the files are as followings.
  * get_activity_names
     - Reads the file that contains activity names and number mapping
 
-# Codebook.md: 
-describes the variables, functions, and relevant transformations for the data cleaning project.
-
-## run_analysis.R
+# Codebook: 
+For the script "run_analysis.R", it describes the variables, functions, and relevant transformations for the data cleaning project.
 
 ## File names
 
