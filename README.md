@@ -11,7 +11,6 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 This repo is for the "Get and Clean Data" Coursera by John Hopkins on Data Sci, the week-4 assignment...
 
-Modified from https://github.com/arundeep78
 
 # Run_analysis.R
 
