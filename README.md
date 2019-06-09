@@ -14,7 +14,7 @@ This repo is for the "Get and Clean Data" Coursera by John Hopkins on Data Sci, 
 
 # Run_analysis.R
 
-This is the main script that is called to performed the cleaning and tidying of the dataset as described in the excercise and listed below.
+This is the script that is called to performed the cleaning and tidying of the dataset as described in the excercise and listed below.
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -24,13 +24,12 @@ This is the main script that is called to performed the cleaning and tidying of 
 
 This file assumes that datazip file has been downloaded and unzipped.
 
-# Run_analysis_util.R
 
-This is supporting script, which provides the helper functions to the main script. This script mainly provides functions to read data from the files.
+The functions to read data from the files are as followings.
 
  * join_data
-    - Takes names of 2 data files with similar variables and return the row-combined dataset 
+    - Takes names of two data files with similar variables and return the row-combined dataset 
  * get_feature_cols_means_std
-    - It takes features file name as input, filters the feature names for "mean"" and "std"" and returns filtered column numbers and tidy names
+    - Takes the features file name as input, filters the feature names for "mean" and "std", and then returns the filtered column numbers and tidy names
  * get_activity_names
     - Reads the file that contains activity names and number mapping
