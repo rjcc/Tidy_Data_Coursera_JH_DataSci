@@ -26,7 +26,7 @@ join_data = function(folder_path, file1, file2){
     data1 = read.table(fullpath_file1 )
     data2 = read.table(fullpath_file2)
     # This is only a basic check on column shape. It does not check the data types
-    # . Even it checks, it is hard to verify if they represent same data
+    # Even it checks, it is hard to verify if they represent the same data
     if(length(data1)!=length(data2)){
         return("two datasets have different number of columns")
     }
@@ -35,7 +35,7 @@ join_data = function(folder_path, file1, file2){
 }
 
 get_feature_cols_means_std = function(folder_path,features_file){
-    # This function get the column numbers for all features that has "mean" and "std" values
+    # This function gets the column numbers for all features that has "mean" and "std"
     
     if(!file.exists(folder_path)){ return("folder path is invalid")}
     
@@ -47,18 +47,18 @@ get_feature_cols_means_std = function(folder_path,features_file){
     
     features = read.table(fullpath_feature_file)
     
-    #get column numbers and names where description has mean or std in it
+    # gets column numbers and names where description has mean or std in it
     col_nums =grep("mean|std",features[,2])
     col_names = grep("mean|std",features[,2],value = TRUE)
     
-    # clean names for any special characters
+    # cleans names for any special characters
     col_names = gsub("[()-]","",col_names)
     
     list("col_numbers"=col_nums,"col_names"=col_names)
 }
 
 get_activity_names = function(folder_path, activity_file){
-    # This function get the activity names as text corresponding to each number
+    # This function gets the activity names as text corresponding to each number
     
     if(!file.exists(folder_path)){ return("folder path is invalid")}
     
@@ -83,7 +83,7 @@ activilty_label_file = "/activity_labels.txt"
 train_subject_file = "/train/subject_train.txt"
 test_subject_file = "/test/subject_test.txt"
 
-# Read data from the files
+# Reads data from the files
 #observations
 total_data = join_data(data_path, train_data_file,test_data_file)
 #labels
@@ -93,20 +93,20 @@ total_subjects = join_data(data_path,train_subject_file,test_subject_file)
 #activity text labels
 activity_labels = get_activity_names(data_path,activilty_label_file)
 
-# Get the columns to be kept i.e. only with means and standard deviation
+# Gets the columns to be kept i.e. only with means and standard deviation
 cols = get_feature_cols_means_std(data_path,features_file)
 cols_to_keep= cols[[1]]
-# select the given columns as needed
+# selects the given columns as needed
 total_data = total_data %>% select(cols_to_keep)
 
-# change the integer labels with text labels
+# changes the integer labels with text labels
 total_labels = activity_labels[match(total_labels[,1],activity_labels[,1]),2]
 #total_labels = as.factor(total_labels)
 
-# Combine observations and labels
+# Combines observations and labels
 total_set = cbind(total_data,total_labels,total_subjects)
 
-# Give descriptive names to variables
+# Gives descriptive names to variables
 cols_names = cols[[2]]
 names(total_set) =c(cols_names,"activitylabel","subject")
 
