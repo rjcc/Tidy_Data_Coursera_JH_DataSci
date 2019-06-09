@@ -1,7 +1,3 @@
----
-title: "CodeBook.md"
-output: html_document
----
 The Codebook describes the variables and relevant transformations for the data cleaning project.
 
 # run_analysis.R
